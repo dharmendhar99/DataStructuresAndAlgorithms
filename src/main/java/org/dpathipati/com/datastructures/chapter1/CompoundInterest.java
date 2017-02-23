@@ -42,7 +42,7 @@ public class CompoundInterest {
 	private static void depositCompoundInterest(BankAccount account, int years, double interest) {
 
 		for (int i = 1; i <= years; i++) {
-			account.deposit(account.getBalance() * interest);
+			account.deposit(account.getBalance() + (account.getBalance() * interest));
 		}
 
 		System.out.println("Depositing for " + years + "year at compount interest " + interest + " resulted in balance of"
